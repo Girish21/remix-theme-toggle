@@ -1,0 +1,63 @@
+:root {
+  --color-background: 0deg 0% 100%;
+  --color-foreground: 0deg 0% 95%;
+  --color-text: 0deg 0% 15%;
+}
+
+.dark {
+  --color-background: 0deg 0% 15%;
+  --color-foreground: 0deg 0% 25%;
+  --color-text: 0deg 0% 90%;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+html {
+  font-family: monospace;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+html,
+body {
+  background: hsl(var(--color-background));
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+main {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+
+button {
+  outline: none;
+  border: none;
+
+  padding: 12px;
+  background-color: hsl(var(--color-foreground));
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: grid;
+  place-content: center;
+}
+
+button svg {
+  height: 42px;
+  width: 42px;
+  color: hsl(var(--color-text));
+}
+
+p {
+  color: hsl(var(--color-text));
+}
